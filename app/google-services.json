@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "9519544813",
+    "firebase_url": "https://checkitout-bc5e0.firebaseio.com",
+    "project_id": "checkitout-bc5e0",
+    "storage_bucket": "checkitout-bc5e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9519544813:android:ada60377e709b54a248fe4",
+        "android_client_info": {
+          "package_name": "com.asad.checkitout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9519544813-jfen6e5a2u2p0ij71nm9ft7h250vmiqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsl0gRmL9bYvNkxc1ji1rDjJCR8CuG1FA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9519544813-jfen6e5a2u2p0ij71nm9ft7h250vmiqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

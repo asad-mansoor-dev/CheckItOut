@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CE0000</color>
+    <color name="colorPrimaryDark">#CE0000</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="btnRed">#9f0000</color>
+    <color name="successGreen">#11A10C</color>
+    <color name="headerFooterPurple">#B283B2</color>
+    <color name="bodyBackgroundPurple">#DEB4F2</color>
+    <color name="buttonPurple">#D6D6D6</color>
+    <color name="buttonBorderWhite">#FFFBFB</color>
+</resources>

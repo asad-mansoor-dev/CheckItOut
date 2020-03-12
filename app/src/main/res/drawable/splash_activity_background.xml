@@ -5,7 +5,19 @@
             <solid android:color="@color/colorPrimary"/>
         </shape>
     </item>
-    <item>
-        <bitmap android:src="@mipmap/logo" android:gravity="center"/>
+    <item android:top="0dp" >
+        <bitmap android:src="@mipmap/logo"  android:gravity="center"/>
     </item>
+    <item android:top="220dp" >
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/splash_text"/>
+    </item>
+
+    <item android:top="400dp" >
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/splash_text2"/>
+    </item>
+
 </layer-list>

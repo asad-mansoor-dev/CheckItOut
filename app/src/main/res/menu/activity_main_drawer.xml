@@ -4,32 +4,18 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_my_checkitout"
-            android:title="CheckItOut" />
+            android:id="@+id/nav_home"
+            android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_my_orders"
-            android:icon="@mipmap/my_orders"
-            android:title="My Orders" />
+            android:id="@+id/nav_men"
+            android:title="@string/menu_men" />
         <item
-            android:id="@+id/nav_my_rewards"
-            android:icon="@mipmap/my_rewards"
-            android:title="My Rewards" />
+            android:id="@+id/nav_women"
+            android:title="@string/menu_women" />
         <item
-            android:id="@+id/nav_my_cart"
-            android:icon="@mipmap/cart_black"
-            android:title="My Cart" />
-        <item
-            android:id="@+id/nav_my_wishlist"
-            android:icon="@mipmap/my_wishlist"
-            android:title="My Whishlist" />
-        <item
-            android:id="@+id/nav_my_account"
-            android:icon="@mipmap/my_account"
-            android:title="My Account" />
+            android:id="@+id/nav_kids"
+            android:title="@string/menu_kids" />
     </group>
-    <item
-        android:id="@+id/nav_sign_out"
-        android:icon="@mipmap/signout"
-        android:title="Sign Out" />
 </menu>

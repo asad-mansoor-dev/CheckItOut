@@ -3,10 +3,7 @@
     <color name="colorPrimary">#DEB4F2</color>
     <color name="colorPrimaryDark">#B283B2</color>
     <color name="colorAccent">#ffffff</color>
+    <color name="colorBlack">#000000</color>
     <color name="btnRed">#B283B2</color>
     <color name="successGreen">#11A10C</color>
-    <color name="headerFooterPurple">#B283B2</color>
-    <color name="bodyBackgroundPurple">#DEB4F2</color>
-    <color name="buttonPurple">#B283B2</color>
-    <color name="buttonBorderWhite">#000000</color>
 </resources>

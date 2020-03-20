@@ -1,16 +1,16 @@
-package com.asad.checkitout.ui.men;
+package com.asad.checkitout.ui.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MenViewModel extends ViewModel {
+public class GalleryViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public MenViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is men fragment");
+    public GalleryViewModel() {
+        //mText = new MutableLiveData<>();
+        //mText.setValue("This is Women fragment");
     }
 
     public LiveData<String> getText() {

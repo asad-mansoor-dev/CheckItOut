@@ -1,85 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.slideshow.SlideshowFragment"
+    android:layout_margin="8dp"
+    android:background="@drawable/grid_item_background"
     android:backgroundTint="@color/colorPrimary"
-    android:orientation="vertical">
+    android:elevation="3dp"
+    tools:context=".ui.slideshow.SlideshowFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="75sp"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_margin="4dp">
-
-        <Button
-            android:id="@+id/btn_tryon"
-            android:layout_marginRight="4dp"
-            android:layout_width="100sp"
-            android:layout_height="75sp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorAccent"
-            android:drawableTop="@mipmap/tryon"
-            android:text="3D Tryon"
-
-            android:textColor="@color/colorBlack">
-        </Button>
-
-        <Button
-            android:id="@+id/btn_frameSizes"
-            android:layout_width="100sp"
-            android:layout_marginRight="4dp"
-            android:layout_height="75sp"
-            android:layout_weight="1"
-
-            android:backgroundTint="@color/colorAccent"
-            android:drawableTop="@mipmap/findglasses"
-            android:text="Frame Sizes"
-            android:textColor="@color/colorBlack">
-        </Button>
-
-        <Button
-            android:id="@+id/btn_buyframes"
-            android:layout_width="100sp"
-            android:layout_height="75sp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorAccent"
-
-            android:drawableTop="@mipmap/shoppingbasket"
-            android:text="Buy Frames"
-            android:textColor="@color/colorBlack">
-        </Button>
-    </LinearLayout>
-
-    <LinearLayout
+    <GridView
+        android:id="@+id/grid_product_layout_gridview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:background="@drawable/grid_item_background"
-        android:elevation="3dp"
-        android:orientation="vertical">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/simpleTabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@android:color/darker_gray"
-            app:tabIndicatorColor="#f00"
-            app:tabSelectedTextColor="#f00"
-            app:tabTextColor="#000" />
-
-        <GridView
-            android:id="@+id/grid_product_layout_gridview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/grid_item_background"
-            android:horizontalSpacing="2dp"
-            android:numColumns="2"
-            android:verticalSpacing="2dp"/>
-    </LinearLayout>
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:verticalSpacing="2dp" />
 </LinearLayout>

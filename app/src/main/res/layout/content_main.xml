@@ -8,14 +8,85 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/grid_item_background"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="75sp"
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btn_tryon"
+                android:layout_width="100sp"
+                android:layout_height="75sp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:drawableTop="@mipmap/tryon"
+                android:text="3D Tryon"
+
+                android:textColor="@color/colorBlack"></Button>
+
+            <Button
+                android:id="@+id/btn_frameSizes"
+                android:layout_width="100sp"
+                android:layout_height="75sp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+
+                android:backgroundTint="@color/colorAccent"
+                android:drawableTop="@mipmap/findglasses"
+                android:text="Frame Sizes"
+                android:textColor="@color/colorBlack">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btn_buyframes"
+                android:layout_width="100sp"
+                android:layout_height="75sp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+
+                android:drawableTop="@mipmap/shoppingbasket"
+                android:text="Buy Frames"
+                android:textColor="@color/colorBlack">
+
+            </Button>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/simpleTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/colorPrimaryDark"
+            app:tabIndicatorColor="#f00"
+            app:tabSelectedTextColor="#f00"
+            app:tabTextColor="#000" />
+    </LinearLayout>
+
+
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:defaultNavHost="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout3"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:navGraph="@navigation/mobile_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

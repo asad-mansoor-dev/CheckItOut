@@ -3,15 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:title="@string/menu_men" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:title="@string/menu_women" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_kids" />
-    </group>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:title="@string/menu_men" />
+            <item
+                android:id="@+id/nav_gallery"
+                android:title="@string/menu_women" />
+            <item
+                android:id="@+id/nav_slideshow"
+                android:title="@string/menu_kids" />
+        </group>
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:title="My account" />
+            <item
+                android:id="@+id/nav_login"
+                android:title="Login" />
+        </menu>
+    </item>
 </menu>

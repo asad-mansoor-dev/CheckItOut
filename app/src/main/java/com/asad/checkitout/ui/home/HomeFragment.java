@@ -23,6 +23,7 @@ import com.asad.checkitout.GridProductModel;
 import com.asad.checkitout.R;
 import com.asad.checkitout.ui.gallery.GalleryFragment;
 import com.asad.checkitout.ui.slideshow.SlideshowFragment;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment {
     private GridView gridView;
     private List<GridProductModel> gridProductModelList = new ArrayList<GridProductModel>();
     private GridProductLayoutAdapter gridProductLayoutAdapter;
-    private TabLayout tabLayout;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -47,66 +48,18 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tabLayout = (TabLayout) view.findViewById(R.id.simpleTabLayout);
 
-        // Create a new Tab named "First"
-        TabLayout.Tab firstTab = tabLayout.newTab();
-        firstTab.setText("First"); // set the Text for the first Tab
-        firstTab.setIcon(R.drawable.ic_menu_camera); // set an icon for the
-// first tab
-        tabLayout.addTab(firstTab); // add  the tab at in the TabLayout
-// Create a new Tab named "Second"
-        TabLayout.Tab secondTab = tabLayout.newTab();
-        secondTab.setText("Second"); // set the Text for the second Tab
-        secondTab.setIcon(R.drawable.ic_menu_gallery); // set an icon for the second tab
-        tabLayout.addTab(secondTab); // add  the tab  in the TabLayout
-// Create a new Tab named "Third"
-        TabLayout.Tab thirdTab = tabLayout.newTab();
-        thirdTab.setText("Third"); // set the Text for the first Tab
-        thirdTab.setIcon(R.drawable.ic_menu_slideshow); // set an icon for the first tab
-        tabLayout.addTab(thirdTab); // add  the tab at in the TabLayout
-
-        // perform setOnTabSelectedListener event on TabLayout
-        tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
-            @SuppressLint("ResourceType")
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                // get the current selected tab's position and replace the fragment accordingly
-                Fragment fragment = null;
-                switch (tab.getPosition()) {
-                    case 0:
-                        fragment = new HomeFragment();
-                        break;
-                    case 1:
-                        fragment = new GalleryFragment();
-                        break;
-                    case 2:
-                        fragment = new SlideshowFragment();
-                        break;
-                }
-                FragmentActivity fragmentActivity = new FragmentActivity();
-                FragmentManager fm = fragmentActivity.getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.layout.fragment_home, fragment);
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                //ft.commit();
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+        final NavigationView navigationView = view.findViewById(R.id.nav_view);
+        //int position = navigationView.getm
+        //TabLayout tabLayout = view.findViewById(R.id.simpleTabLayout);
+        //int index = tabLayout.getSelectedTabPosition();
 
         gridProductModelList.add(new GridProductModel(R.mipmap.search_icon, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.cart_icon, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.findglasses, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.my_menu, "Rs 5000/-"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.logo_round, "Rs 5000/-"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.green_email, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.logo_round, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.green_email, "Rs 5000/-"));
 

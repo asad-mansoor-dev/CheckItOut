@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.0'
     implementation 'com.google.firebase:firebase-firestore:21.4.1'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
     // implementation "androidx.multidex:multidex:2.0.0"    //Was added to remove an error
 
 }

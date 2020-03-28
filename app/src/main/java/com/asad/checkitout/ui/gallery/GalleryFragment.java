@@ -33,7 +33,6 @@ public class GalleryFragment extends Fragment {
     private GridView gridView;
     private List<GridProductModel> gridProductModelList = new ArrayList<GridProductModel>();
     private GridProductLayoutAdapter gridProductLayoutAdapter;
-    private TabLayout tabLayout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,43 +44,7 @@ public class GalleryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tabLayout = (TabLayout) view.findViewById(R.id.simpleTabLayout);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
-            @SuppressLint("ResourceType")
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                // get the current selected tab's position and replace the fragment accordingly
-                Fragment fragment = null;
-                switch (tab.getPosition()) {
-                    case 0:
-                        fragment = new HomeFragment();
-                        break;
-                    case 1:
-                        fragment = new GalleryFragment();
-                        break;
-                    case 2:
-                        fragment = new SlideshowFragment();
-                        break;
-                }
-                FragmentActivity fragmentActivity = new FragmentActivity();
-                FragmentManager fm = fragmentActivity.getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.layout.fragment_home, fragment);
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                //ft.commit();
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
         gridProductModelList.add(new GridProductModel(R.mipmap.search_icon, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.cart_icon, "Rs 5000/-"));
         gridProductModelList.add(new GridProductModel(R.mipmap.findglasses, "Rs 5000/-"));

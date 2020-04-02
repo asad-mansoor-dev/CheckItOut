@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,7 +70,9 @@ public class SearchActivity extends AppCompatActivity {
         } catch (Exception e) {
         }
 
-        SearchView searchView = (SearchView) findViewById(R.id.search_view);
+        final SearchView searchView = (SearchView) findViewById(R.id.search_view);
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
         final EditText searchEditText = (EditText) searchView.findViewById(androidx.appcompat.R.id.search_src_text);
         searchEditText.setTextColor(getResources().getColor(R.color.colorBlack));
         searchEditText.setHintTextColor(getResources().getColor(R.color.colorBlack));
@@ -126,14 +130,21 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(searchItemsAdapter);
 
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
             @Override
             public boolean onQueryTextSubmit(String query) {
+
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+//                searchView.setFocusable(true);
+//                searchView.requestFocus();
+//                searchView.requestFocusFromTouch();
+//                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
                 searchItemsAdapter.getFilter().filter(newText);
                 return false;
             }

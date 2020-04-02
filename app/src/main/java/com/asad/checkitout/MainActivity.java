@@ -1,6 +1,7 @@
 package com.asad.checkitout;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private TabLayout tabLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,11 +142,21 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.main_search_icon){
-            // TODO Search
+            startActivity(new Intent(getApplicationContext(),SearchActivity.class));
             return true;
         }
         else if(id == R.id.main_cart_icon) {
-            //TODO Cart
+            //startActivity(new Intent(getApplicationContext(),ActivityForFragments.class));
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+//            ft.replace(R.id.activity_for_fragments, new MyCartFragment());
+//            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//            ft.commit();
+
+            Fragment fragment =new MyCartFragment();
+            ft.add(android.R.id.content,fragment);
+            ft.commit();
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -155,4 +167,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

@@ -54,14 +54,12 @@ public class HomeFragment extends Fragment {
         //TabLayout tabLayout = view.findViewById(R.id.simpleTabLayout);
         //int index = tabLayout.getSelectedTabPosition();
 
-        gridProductModelList.add(new GridProductModel(R.mipmap.search_icon, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.cart_icon, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.findglasses, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.my_menu, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.logo_round, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.green_email, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.logo_round, "Rs 5000/-"));
-        gridProductModelList.add(new GridProductModel(R.mipmap.green_email, "Rs 5000/-"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.search_icon, "Rs 5000/-", "Vincent Chase"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.cart_icon, "Rs 5000/-", "Google glasses"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.findglasses, "Rs 5000/-", "Sun Glasses"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.my_menu, "Rs 5000/-", "Swimming Glasses"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.logo_round, "Rs 5000/-", "Blacky Glasses"));
+        gridProductModelList.add(new GridProductModel(R.mipmap.green_email, "Rs 5000/-", "White Googles"));
 
 
         gridView = (GridView) view.findViewById(R.id.grid_product_layout_gridview);

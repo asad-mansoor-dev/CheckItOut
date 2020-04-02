@@ -4,8 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_main">MainActivity</string>
     <string name="nav_header_desc">Navigation header</string>
-
-
+    <string name="search_hint">Type your search here</string>
     <string name="menu_men">Men Frames</string>
     <string name="menu_women">Women Frames</string>
     <string name="menu_kids">Kids Frames</string>

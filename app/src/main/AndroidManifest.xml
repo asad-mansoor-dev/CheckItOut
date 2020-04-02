@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".ProductDetail"></activity>
+        <activity
+            android:name=".SearchActivity"></activity>
+        <activity android:name=".ActivityForFragments" />
+        <activity android:name=".ProductDetail" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"

@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <activity android:name=".ProductDetailViewActivity"></activity>
+        <activity android:name=".SearchActivity" />
         <activity
-            android:name=".SearchActivity"></activity>
-        <activity android:name=".ActivityForFragments" />
+            android:name=".ActivityForFragments"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ProductDetail" />
         <activity
             android:name=".MainActivity"

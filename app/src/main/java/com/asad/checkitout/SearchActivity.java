@@ -70,7 +70,7 @@ public class SearchActivity extends AppCompatActivity {
         } catch (Exception e) {
         }
 
-        final SearchView searchView = (SearchView) findViewById(R.id.search_view);
+        SearchView searchView = (SearchView) findViewById(R.id.search_view);
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
         final EditText searchEditText = (EditText) searchView.findViewById(androidx.appcompat.R.id.search_src_text);
